@@ -1,8 +1,9 @@
 import axios from "axios";
-import {  Card, Label, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import Button from "../../components/ui/button/Button";
+import Label from "../../components/form/Label";
+import Input from "../../components/form/input/InputField";
 
 const CreateCoach: React.FC = () => {
   const navigate = useNavigate();
@@ -63,13 +64,13 @@ const CreateCoach: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center p-4">
-      <Card className="w-[50%]">
+      <div className="w-[50%]">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="name" value="Name :" />
+              <Label htmlFor="name" >Name :</Label>
             </div>
-            <TextInput
+            <Input
               id="name"
               type="text"
               required
@@ -79,9 +80,9 @@ const CreateCoach: React.FC = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="email" value="Email :" />
+              <Label htmlFor="email" >Email :</Label>
             </div>
-            <TextInput
+            <Input
               id="email"
               type="email"
               required
@@ -91,9 +92,9 @@ const CreateCoach: React.FC = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="mobile" value="Mobile Number :" />
+              <Label htmlFor="mobile" >Mobile Number :</Label>
             </div>
-            <TextInput
+            <Input
               id="mobile"
               type="text"
               required
@@ -104,9 +105,9 @@ const CreateCoach: React.FC = () => {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="password" value="Password :" />
+              <Label htmlFor="password">Password :</Label>
             </div>
-            <TextInput
+            <Input
               id="password"
               type="password"
               required
@@ -129,7 +130,7 @@ const CreateCoach: React.FC = () => {
             Submit
           </Button>
         </form>
-      </Card>
+      </div>
     </div>
   );
 };
