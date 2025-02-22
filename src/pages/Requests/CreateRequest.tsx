@@ -11,7 +11,7 @@ import Button from "../../components/ui/button/Button";
 import Input from "../../components/form/input/InputField";
 import Select from "../../components/form/Select";
 
-const SERVER_URL = process.env.REACT_APP_API_URL as string;
+const SERVER_URL = import.meta.env.VITE_SERVER_URL as string;
 
 interface Option {
   label: string;

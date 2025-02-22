@@ -8,7 +8,7 @@ const CreateCoach: React.FC = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const config = { headers: { Authorization: `Bearer ${token}` } };
-  const SERVER_URL = process.env.REACT_APP_API_URL as string;
+  const SERVER_URL = import.meta.env.VITE_SERVER_URL as string;
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [mobile, setMobile] = useState<string>("");

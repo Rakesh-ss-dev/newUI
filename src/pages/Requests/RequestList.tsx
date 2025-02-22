@@ -18,7 +18,7 @@ interface Request {
 
 const RequestList: React.FC = () => {
   const [requests, setRequests] = useState<Request[]>([]);
-  const SERVER_URL = process.env.REACT_APP_API_URL as string;
+  const SERVER_URL = import.meta.env.VITE_SERVER_URL as string;
   const token = localStorage.getItem("token");
 
   // Fetch requests data

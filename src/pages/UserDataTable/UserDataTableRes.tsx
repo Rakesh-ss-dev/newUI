@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Sample data
 
-const SERVER_URL = process.env.REACT_APP_API_URL as string;
+const SERVER_URL = import.meta.env.VITE_SERVER_URL as string;
 const token = localStorage.getItem("token");
 const UserDataTableRes: React.FC = () => {
   

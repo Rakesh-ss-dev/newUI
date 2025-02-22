@@ -13,7 +13,7 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
-  const SERVER_URL = process.env.REACT_APP_API_URL;
+  const SERVER_URL = import.meta.env.VITE_SERVER_URL as string;
   const handleSignin = async (e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     try {
